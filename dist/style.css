@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+
+.row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sidebar {
+  width: 20%;
+  height: 100%;
+  background-color: #f3c623;
+  color: #10375C;
+  /* padding: 20px; */
+  float: left;
+}
+
+.sidebar h3{
+  padding:10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  color: #10375C;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #eb8317;
+}
+
+.content {
+  height: 100%;
+  width: 80%;
+  padding: 20px;
+  float: left;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons button {
+  margin: 0 5px;
+}
+
+.checkout {
+  margin-top: 20px;
+}
+
+/* 結算頁面彈出層樣式 */
+.checkout-page {
+  position: fixed;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  transition: bottom 0.4s ease;
+  padding: 20px;
+  z-index: 10;
+}
+
+.checkout-page.visible {
+  bottom: 0;
+}
+
+.checkout-content {
+  padding: 20px;
+}
+
+/* 背景變暗效果 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 5;
+}
+
+.overlay.visible {
+  display: block;
+}

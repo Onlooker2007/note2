@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="row">
+    <div class="sidebar">
+      <h3>購物分類</h3>
+      <ul>
+        <li onclick="loadProducts('電子產品')">電子產品</li>
+        <li onclick="loadProducts('家居用品')">家居用品</li>
+        <li onclick="loadProducts('書籍')">書籍</li>
+        <li onclick="loadProducts('服飾')">服飾</li>
+      </ul>
+    </div>
+
+    <div class="content" id="shopping-page">
+      <h3 id="category-title">電子產品</h3>
+      <div id="product-list">
+        <!-- 商品列表將會動態插入這裡 -->
+      </div>
+      <button class="checkout" onclick="checkout()">結算</button>
+    </div>
+
+    <!-- 結算彈出層 -->
+    <div class="checkout-page" id="checkout-page">
+      <h3>結算頁面</h3>
+      <div class="checkout-content" id="checkout-content">
+        <!-- 動態生成的商品列表會顯示在這裡 -->
+      </div>
+      <button onclick="closeCheckout()">關閉</button>
+      <a href="view2.html"><button id="next">結算</button></a>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+  </div>
+  <script  src="script.js"></script>
+  <script  src="write.js"></script>
+</body>
+</html>
